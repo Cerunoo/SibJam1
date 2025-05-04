@@ -74,11 +74,16 @@ public class CarController : MonoBehaviour, IBotController
     {
         if (!crush)
         {
-            if (corC != null)
+            if (collision.gameObject.tag == "Player")
             {
-                StopCoroutine(corC);
-                corC = null;
+                PlayerController.Instance.gameObject.GetComponent<PlayerHP>().val--;
             }
+
+            if (corC != null)
+                {
+                    StopCoroutine(corC);
+                    corC = null;
+                }
             if (collision.gameObject.GetComponent<PlayerController>())
             {
                 collision.gameObject.GetComponent<PlayerController>().SetCrush(true);

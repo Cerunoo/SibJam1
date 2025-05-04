@@ -4,9 +4,11 @@ using System.Collections;
 public class Loader : MonoBehaviour
 {
     [SerializeField] private GameObject pauser;
+    public AudioClip accClip;
 
     private void Start()
     {
+        PlayerPrefs.DeleteAll();
         DontDestroyOnLoad(pauser);
     }
 
@@ -17,6 +19,7 @@ public class Loader : MonoBehaviour
         {
             StartCoroutine(CallNull());
             start = true;
+            SoundManager.Instance.PullVFX(accClip);
         }
     }
 

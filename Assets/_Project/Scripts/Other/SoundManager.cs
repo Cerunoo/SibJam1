@@ -5,6 +5,9 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
+    [SerializeField] private AudioSource sourceBG;
+    [SerializeField] private AudioSource sourceVFX;
+
     private float bg;
     private float vfx;
 
@@ -13,6 +16,14 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] private Color selColor;
     [SerializeField] private Color defColor;
+
+    public AudioClip setVol;
+    public AudioClip posVol;
+
+    public void PullVFX(AudioClip clip)
+    {
+        sourceVFX.PlayOneShot(clip);
+    }
 
     public void SetTexts(Text bg, Text vfx)
     {
@@ -62,17 +73,28 @@ public class SoundManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            PullVFX(setVol);
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            PullVFX(setVol);
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             slot = 1;
             if (bgText) bgText.color = selColor;
             if (vfxText) vfxText.color = defColor;
+            PullVFX(posVol);
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             slot = 2;
             if (bgText) bgText.color = defColor;
             if (vfxText) vfxText.color = selColor;
+            PullVFX(posVol);
         }
     }
 
@@ -87,6 +109,8 @@ public class SoundManager : MonoBehaviour
             PlayerPrefs.SetFloat("BG", value);
 
             if (bgText) bgText.text = $"BG: {value:F0}";
+
+            sourceBG.volume = value / 100;
         }
     }
     public float VFX
@@ -100,6 +124,8 @@ public class SoundManager : MonoBehaviour
             PlayerPrefs.SetFloat("VFX", value);
 
             if (vfxText) vfxText.text = $"VFX: {value:F0}";
+
+            sourceVFX.volume = value / 100;
         }
     }
 

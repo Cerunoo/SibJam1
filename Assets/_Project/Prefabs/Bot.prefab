@@ -68,8 +68,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0029000044, y: 0.37855005, z: 0}
-    m_Extent: {x: 2.6612, y: 3.02525, z: 0}
+    m_Center: {x: -0.0029000044, y: 1.4820001, z: 0}
+    m_Extent: {x: 2.6612, y: 4.1287003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -84,7 +84,7 @@ MonoBehaviour:
   - {x: -0.02127719, y: -0.14786959, z: 0}
   - {x: 0.14360607, y: -0.023405163, z: 0}
   - {x: 0.16054416, y: 0.47264206, z: 0}
-  - {x: 0.00073599815, y: 0.9032802, z: 0}
+  - {x: 0.0005381208, y: 3.1105764, z: 0}
   - {x: -0.15452552, y: 0.48745415, z: 0}
 --- !u!1 &5245319678942008708
 GameObject:
@@ -281,8 +281,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0029000044, y: 0.37855005, z: 0}
-    m_Extent: {x: 2.6612, y: 3.02525, z: 0}
+    m_Center: {x: -0.0029000044, y: 1.49775, z: 0}
+    m_Extent: {x: 2.6612, y: 4.14445, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -297,7 +297,7 @@ MonoBehaviour:
   - {x: -0.02127719, y: -0.14786959, z: 0}
   - {x: 0.14360607, y: -0.023405163, z: 0}
   - {x: 0.16054416, y: 0.47264206, z: 0}
-  - {x: 0.00073599815, y: 0.9032802, z: 0}
+  - {x: -0.047019854, y: 3.1415057, z: 0}
   - {x: -0.15452552, y: 0.48745415, z: 0}
 --- !u!1 &8714625378959286543
 GameObject:
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b5038694963884e970e6282c34b16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 7
+  MaxSpeed: 2.6
   Acceleration: 120
   Deceleration: 60
   vertical: -1
@@ -414,8 +414,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0043468475, y: -0.11519259}
-  m_Size: {x: 1.0216264, y: 1.9780499}
+  m_Offset: {x: -0.0043468177, y: 0.20196152}
+  m_Size: {x: 0.8466734, y: 0.8466735}
   m_Direction: 0
 --- !u!1 &8823280650935312777
 GameObject:

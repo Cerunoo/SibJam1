@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour, IPlayerController
     private FrameInput _frameInput;
     private Vector2 _frameVelocity;
 
+    public AudioClip crSol;
+
     [Header("States")]
     public bool facingTop;
     public bool disableMove;
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     #region Interface
 
     public float Vertical => _frameInput.Vertical;
+    public float Speed => _frameVelocity.y;
     public event Action<bool> Sniff;
     public event Action Crush;
     public event Action UnCrush;
@@ -181,6 +184,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     {
         if (hit)
         {
+            SoundManager.Instance.PullVFX(crSol);
             Crush?.Invoke();
             disableMove = true;
             _rb.constraints = RigidbodyConstraints2D.FreezePositionX;
@@ -203,6 +207,7 @@ public struct FrameInput
 public interface IPlayerController
 {
     public float Vertical { get; }
+    public float Speed { get; }
     public event Action<bool> Sniff;
     public event Action Crush;
     public event Action UnCrush;

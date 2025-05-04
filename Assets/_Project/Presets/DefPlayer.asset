@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SnapInput: 1
   VerticalDeadZoneThreshold: 0.1
-  MaxSpeed: 13
-  Acceleration: 100
-  Deceleration: 60
+  MaxSpeed: 16
+  Acceleration: 27
+  Deceleration: 70
