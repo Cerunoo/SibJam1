@@ -2,13 +2,13 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Bot
   - Water
   - UI
   - 
@@ -41,3 +41,26 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Lower
+    uniqueID: 3312004859
+    locked: 0
+  - name: Objects
+    uniqueID: 2461643989
+    locked: 0
+  - name: Player
+    uniqueID: 1405156819
+    locked: 0
+  - name: Characters
+    uniqueID: 810434199
+    locked: 0
+  - name: Upper
+    uniqueID: 860538569
+    locked: 0
+  - name: World
+    uniqueID: 2330879615
+    locked: 0
+  - name: Canvas
+    uniqueID: 38888161
+    locked: 0
+  m_RenderingLayers:
+  - Default
